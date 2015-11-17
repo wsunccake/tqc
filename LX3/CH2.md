@@ -1,14 +1,16 @@
 # 第二類練習
 
 ## chmod
-chmod 664 file	
-chmod  修改檔案或目錄權限	
+
+chmod 664 file
+chmod  修改檔案或目錄權限
 	rwxrw-_r--		
 	user_group_other	
 r=4,w=2,x=1		
 	664= rw-rw-r_		
 
 ## 權限 rwxrwSrwT
+
 特殊權限 
 s 或 S  
 (SUID,Set UID）： 	
@@ -22,11 +24,16 @@ t 或 T（Sticky）：
 因為 SUID、SGID、Sticky 佔用 x 的位置來表示，所以在表示上會有大小寫之分。"同時加入開啟/執行權限"和 SUID、SGID、Sticky，則權限表示符號是小寫的
 
 ## spilt
-spilt -n 4 1.txt: 將1.txt文件內容分成四份存成新檔案*4
-spilt -n41.txt: no meaning
+
+	# 將1.txt文件內容分成四份存成新檔案*4
+	spilt -n 4 1.txt
+
+	spilt -n41.txt # no meaning
 
 ## 環境變數
+
 ### env (environment)
+
 HOSTNAME=    <== 這部主機的主機名稱	
 TERM=        <== 這個終端機使用的環境是什麼類型	
 SHELL=       <== 目前這個環境下，使用的 Shell 是哪一個程式？	
@@ -41,10 +48,13 @@ LANG=zh_TW.UTF-8      <== 語系
 HOME=        <== 這個使用者的家目錄啊！	
 LOGNAME=     <== 登入者用來登入的帳號名稱		
 _=/usr/bin/env        <== 上一次使用的指令的最後一個參數(或指令本身)
+
 ### set 
+
 觀察所有變數 (含環境變數與自訂變數)
 
 ## bash
+
 bash的組態檔	
 /etc/profile	
 /etc/bashrc	
