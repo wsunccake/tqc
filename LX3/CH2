@@ -1,0 +1,111 @@
+# 第二類練習
+
+## chmod
+chmod 664 file	
+chmod  修改檔案或目錄權限	
+	rwxrw-_r--		
+	user_group_other	
+r=4,w=2,x=1		
+	664= rw-rw-r_		
+
+## 權限 rwxrwSrwT
+特殊權限 
+s 或 S  
+(SUID,Set UID）： 	
+可執行的文件搭配這個權限，便能得到特權，任意存取該文件的所有者能使用的全部系統資源。請注意具備 SUID 權限的文件，黑客經常利用這種權限，以 SUID 配上 root 帳號擁有者，無聲無息的在系統中開啟後門，供日後進出使用。	 
+(SGID，Set GID）： 	
+設置在文件上面，其效果與 SUID 相同，只不過將文件所有者換成群組，該文件就可以任意存取整個群組所能使用的系統資源。 
+
+t 或 T（Sticky）： 	
+/tmp 和 /var/tmp 目錄供所有用戶暫時存取檔案，亦即每個用戶皆擁有完整的權限進入該目錄，瀏覽、刪除和移動檔案。 
+
+因為 SUID、SGID、Sticky 佔用 x 的位置來表示，所以在表示上會有大小寫之分。"同時加入開啟/執行權限"和 SUID、SGID、Sticky，則權限表示符號是小寫的
+
+## spilt
+spilt -n 4 1.txt: 將1.txt文件內容分成四份存成新檔案*4
+spilt -n41.txt: no meaning
+
+## 環境變數
+### env (environment)
+HOSTNAME=    <== 這部主機的主機名稱	
+TERM=        <== 這個終端機使用的環境是什麼類型	
+SHELL=       <== 目前這個環境下，使用的 Shell 是哪一個程式？	
+HISTSIZE=    <== 『記錄指令的筆數』在 CentOS 預設可記錄 1000 筆	
+OLDPWD=      <== 上一個工作目錄的所在	
+LC_ALL=en_US.utf8     <== 語系	
+USER=        <== 使用者名稱	
+MAIL=/var/spool/mail/ <== 這個使用者所取用的 mailbox 位置	
+PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/dmtsai/.local/bin:/home/dmtsai/bin		
+PWD=/home/   <== 目前使用者所在的工作目錄 (利用 pwd 取出！)	
+LANG=zh_TW.UTF-8      <== 語系	
+HOME=        <== 這個使用者的家目錄啊！	
+LOGNAME=     <== 登入者用來登入的帳號名稱		
+_=/usr/bin/env        <== 上一次使用的指令的最後一個參數(或指令本身)
+### set 
+觀察所有變數 (含環境變數與自訂變數)
+
+## bash
+bash的組態檔	
+/etc/profile	
+/etc/bashrc	
+${home}/.profile	
+${home}/.bashrc	
+
+## du, df
+df: 看磁碟分割空間		
+du: 看目錄所占用的磁碟空間
+
+## 搜索
+which (尋找『執行檔』)	
+whereis (由一些特定的目錄中尋找檔案檔名)	
+locate [-ir] keyword	
+	-i  ：忽略大小寫的差異；	
+find
+
+##
+chsh ==>更改使用者預設shell
+
+##
+echo $PATH ==>取得環境變數PATH的值
+
+##
+change , useradd , usermod ==> 設定使用者帳號
+
+##
+bash是shell常用的檔
+
+##
+../etc/shadow ==>放密碼
+
+##
+ls-lR/etc 
+find/etc -print
+==>看出目錄下所有的檔案
+
+##
+在vi下啟動編輯文字可用a(A),o(O),i(I)
+
+##
+tac , more , less ==>顯示檔案內容
+
+##
+uname -a ==>得知目前核新版本和編譯日期
+
+##
+cat , more ,less ==>顯示檔案
+
+##
+5yyp ==> 使用小寫
+
+##
+groups user ==> 找出某一特定使用者所屬的全部群組
+
+##
+-ba ==>空行也能編號
+
+##
+在vi下,G為跳到最後一行
+
+##
+/etc/password ==> 看帳號
+/etc/shadow   ==> 看密碼
