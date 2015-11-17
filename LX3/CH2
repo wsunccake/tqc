@@ -61,3 +61,48 @@ whereis (由一些特定的目錄中尋找檔案檔名)
 locate [-ir] keyword	
 	-i  ：忽略大小寫的差異；	
 find
+
+##
+chsh ==>更改使用者預設shell
+
+##
+echo $PATH ==>取得環境變數PATH的值
+
+##
+change , useradd , usermod ==> 設定使用者帳號
+
+##
+bash是shell常用的檔
+
+##
+/etc/shadow ==>放密碼
+
+##
+ls -lR /etc 
+find /etc -print
+==>看出目錄下所有的檔案
+
+##
+在vi下啟動編輯文字可用a(A),o(O),i(I)
+
+##
+cat, tac , more , less ==>顯示檔案內容
+
+##
+uname -a ==>得知目前核新版本和編譯日期
+
+##
+5yyp ==> 使用小寫
+
+##
+groups user ==> 找出某一特定使用者所屬的全部群組
+
+##
+-ba ==>空行也能編號
+
+##
+在vi下,G為跳到最後一行
+
+##
+/etc/password ==> 看帳號
+/etc/shadow   ==> 看密碼
